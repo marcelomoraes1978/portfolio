@@ -24,7 +24,7 @@ Para visualizar o portfólio localmente, siga estes passos:
 1. Clone o repositório:
 
     ```bash
-    git clone https://github.com/usuario/repo.git
+https://github.com/marcelomoraes1978/portfolio/tree/main
     ```
 
 2. Navegue até o diretório do projeto:
