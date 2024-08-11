@@ -138,32 +138,53 @@ section h2 {
 }
 
 
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    gap: 8px;
+    padding: 10px; /* Adiciona um padding para melhorar a apresentação */
+}
+
 #contact a {
     display: flex;
-    justify-content: center;
-    gap: 4px;
+    flex-direction: row; /* Alinha o ícone e o texto na horizontal */
+    align-items: center; /* Alinha verticalmente o ícone e o texto */
+    gap: 8px; /* Espaçamento entre o ícone e o texto */
     border: 2px solid black;
-    width: 10%;
-    text-align: center;
+    width: 100%; /* Faz com que os links ocupem toda a largura disponível */
+    max-width: 300px; /* Define um tamanho máximo para evitar que fique muito largo */
+    text-align: left; /* Alinha o texto à esquerda */
     border-radius: 8px;
     font-size: 1.5rem;
     font-weight: 600;
-    padding: 5px;
+    padding: 10px; /* Aumenta o padding para melhorar a aparência */
     text-decoration: none;
-    color:#333;
-    
+    color: #333;
+    box-sizing: border-box; /* Inclui o padding e a borda no cálculo da largura e altura */
 }
 
-#contact  {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    gap: 8px;
+#contact a img {
+    width: 24px; /* Ajusta o tamanho dos ícones */
+    height: 24px;
 }
 
 #contact a:hover {
     background-color: rgba(133, 128, 128, 0.934);
+}
+
+/* Estilos específicos para dispositivos móveis */
+@media (max-width: 768px) {
+    #contact a {
+        width: 100%; /* Ajusta a largura dos links em dispositivos móveis */
+    }
+}
+
+/* Estilos específicos para dispositivos móveis */
+@media (max-width: 768px) {
+    #contact a {
+        width: 90%; /* Ajusta a largura dos links em dispositivos móveis */
+    }
 }
 
 .overlay {
