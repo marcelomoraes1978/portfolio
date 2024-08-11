@@ -90,32 +90,80 @@ section h2 {
     background-color: #fff;
     border-radius: 8px;
     margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os certificados quebrem para a próxima linha se não houver espaço suficiente */
+    gap: 50px; /* Espaçamento entre os certificados */
+    justify-content: flex-start; /* Alinha os certificados ao início do container */
 }
 
-.certificate {
+.certificado {
+    flex: 1 1 20%; /* Cada certificado ocupará cerca de 30% do container */
+    max-width: 20%; /* Limita a largura máxima de cada certificado */
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo em coluna */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    text-align: center; /* Centraliza o texto dentro do container */
+    transition: transform 0.3s, box-shadow 0.3s;  /*Adiciona uma transição suave para o hover */
+    cursor: pointer; /* Muda o cursor para indicar que o item é clicável */
+}
+
+.certificado:hover {
+    transform: scale(1.06); /* Aumenta ligeiramente o tamanho do certificado */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Intensifica a sombra para destacar o certificado */
+}
+
+
+.certificado img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    max-width: 250px; /* Define uma largura máxima para a imagem (ajuste conforme necessário) */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Arredonda os cantos da imagem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao redor da imagem */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
     .certificado {
-        max-width: 90%; /* Ajuste o tamanho máximo da imagem conforme necessário */
-        height: auto; /* Mantém a proporção da imagem */
-        margin: 0 auto; /* Centraliza a imagem */
-        display: block; /* Remove o espaço extra abaixo da imagem */
+        flex: 1 1 45%; /* Cada certificado ocupará cerca de 45% do container em telas menores */
+        max-width: 45%;
     }
-    
 }
 
-.certificate-image {
-    max-width: 10%;
-    height: auto;
-    cursor: pointer; /* Para indicar que a imagem é clicável */
+@media (max-width: 480px) {
+    .certificado {
+        flex: 1 1 100%; /* Cada certificado ocupará 100% do container em telas muito pequenas */
+        max-width: 100%;
+    }
 }
 
 
 #contact a {
-    color: #333;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    border: 2px solid black;
+    width: 10%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 5px;
     text-decoration: none;
+    color:#333;
+    
 }
 
-#zap a {
-    color: #25D366; /* Cor do link para WhatsApp */
+#contact  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 8px;
+}
+
+#contact a:hover {
+    background-color: rgba(133, 128, 128, 0.934);
 }
 
 .overlay {
