@@ -85,6 +85,25 @@ section h2 {
     text-decoration: none;
 }
 
+#certificates {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.certificate {
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.certificate-image {
+    max-width: 10%;
+    height: auto;
+    cursor: pointer; /* Para indicar que a imagem é clicável */
+}
+
+
 #contact a {
     color: #333;
     text-decoration: none;
@@ -93,6 +112,25 @@ section h2 {
 #zap a {
     color: #25D366; /* Cor do link para WhatsApp */
 }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay-image {
+    max-width: 90%;
+    max-height: 90%;
+}
+
 
 @media (max-width: 768px) {
     .project-card img {
