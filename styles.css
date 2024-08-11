@@ -93,9 +93,13 @@ section h2 {
 }
 
 .certificate {
-    max-width: 100%; /* Garante que a imagem não ultrapasse o container */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Remove o espaço extra abaixo da imagem */
+    .certificado {
+        max-width: 90%; /* Ajuste o tamanho máximo da imagem conforme necessário */
+        height: auto; /* Mantém a proporção da imagem */
+        margin: 0 auto; /* Centraliza a imagem */
+        display: block; /* Remove o espaço extra abaixo da imagem */
+    }
+    
 }
 
 .certificate-image {
