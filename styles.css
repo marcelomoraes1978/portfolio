@@ -93,8 +93,9 @@ section h2 {
 }
 
 .certificate {
-    margin-bottom: 5%;
-    text-align: left;
+    max-width: 100%; /* Garante que a imagem não ultrapasse o container */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove o espaço extra abaixo da imagem */
 }
 
 .certificate-image {
