@@ -1,4 +1,6 @@
 body {
+    height: 100vh;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
     overflow-x: hidden; /* Oculta a rolagem horizontal */
     line-height: 1.6;
@@ -94,6 +96,7 @@ section h2 {
     flex-wrap: wrap; /* Permite que os certificados quebrem para a próxima linha se não houver espaço suficiente */
     gap: 50px; /* Espaçamento entre os certificados */
     justify-content: flex-start; /* Alinha os certificados ao início do container */
+    
 }
 
 .certificado {
@@ -120,6 +123,7 @@ section h2 {
     height: auto; /* Mantém a proporção da imagem */
     border-radius: 8px; /* Arredonda os cantos da imagem */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao redor da imagem */
+    
 }
 
 /* Responsividade */
