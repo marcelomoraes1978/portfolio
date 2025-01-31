@@ -1,33 +1,43 @@
-body {
-    height: 100vh;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden; /* Oculta a rolagem horizontal */
-    line-height: 1.6;
+:root {
+    --primary-color: #333;
+    --secondary-color: #f4f4f4;
+    --accent-color: #007BFF;
+    --overlay-bg: rgba(0, 0, 0, 0.8);
+    --transition-speed: 0.3s;
+}
+
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .minha-foto {
     display: inline-block;
-    width: 200px; /* Ajuste o tamanho conforme necessário */
-    height: 200px; /* Ajuste o tamanho conforme necessário */
-    border-radius: 50%; /* Faz a imagem circular */
-    overflow: hidden; /* Garante que a imagem não ultrapasse o círculo */
-    margin-bottom: 10px; /* Espaçamento inferior */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
 }
 
 .minha-foto img {
     width: 100%;
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Remove o espaço embaixo da imagem */
+    height: auto;
+    display: block;
 }
 
-
 header {
-    background-color: #333;
+    background-color: var(--primary-color);
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -72,20 +82,9 @@ section h2 {
 }
 
 .project-card img {
-    max-width: 450px; /* Define a largura máxima em pixels */
-    width: 100%; /* Faz a imagem ocupar 100% do container até o máximo especificado */
-    height: auto; /* Mantém a proporção da imagem */
-}
-
-
-
-.project-card h3 {
-    margin: 0;
-}
-
-.project-card a {
-    color: #333;
-    text-decoration: none;
+    max-width: 450px;
+    width: 100%;
+    height: auto;
 }
 
 #certificates {
@@ -94,102 +93,63 @@ section h2 {
     border-radius: 8px;
     margin-top: 20px;
     display: flex;
-    flex-wrap: wrap; /* Permite que os certificados quebrem para a próxima linha se não houver espaço suficiente */
-    gap: 50px; /* Espaçamento entre os certificados */
-    justify-content: flex-start; /* Alinha os certificados ao início do container */
-    
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: flex-start;
 }
 
 .certificado {
-    flex: 1 1 20%; /* Cada certificado ocupará cerca de 30% do container */
-    max-width: 20%; /* Limita a largura máxima de cada certificado */
+    flex: 1 1 20%;
+    max-width: 20%;
     display: flex;
-    flex-direction: column; /* Organiza o conteúdo em coluna */
-    align-items: center; /* Centraliza o conteúdo horizontalmente */
-    text-align: center; /* Centraliza o texto dentro do container */
-    transition: transform 0.3s, box-shadow 0.3s;  /*Adiciona uma transição suave para o hover */
-    cursor: pointer; /* Muda o cursor para indicar que o item é clicável */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    cursor: pointer;
 }
 
 .certificado:hover {
-    transform: scale(1.06); /* Aumenta ligeiramente o tamanho do certificado */
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Intensifica a sombra para destacar o certificado */
+    transform: scale(1.06);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
-
 
 .certificado img {
-    width: 100%; /* Faz a imagem ocupar toda a largura do container */
-    height: auto; /* Mantém a proporção da imagem */
-    max-width: 250px; /* Define uma largura máxima para a imagem (ajuste conforme necessário) */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 8px; /* Arredonda os cantos da imagem */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao redor da imagem */
-    
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .certificado {
-        flex: 1 1 45%; /* Cada certificado ocupará cerca de 45% do container em telas menores */
-        max-width: 45%;
-    }
-}
-
-@media (max-width: 480px) {
-    .certificado {
-        flex: 1 1 100%; /* Cada certificado ocupará 100% do container em telas muito pequenas */
-        max-width: 100%;
-    }
-}
-
 
 #contact {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinha os itens à esquerda */
+    align-items: flex-start;
     gap: 8px;
-    padding: 10px; /* Adiciona um padding para melhorar a apresentação */
+    padding: 10px;
 }
 
 #contact a {
     display: flex;
-    flex-direction: row; /* Alinha o ícone e o texto na horizontal */
-    align-items: center; /* Alinha verticalmente o ícone e o texto */
-    gap: 8px; /* Espaçamento entre o ícone e o texto */
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
     border: 2px solid black;
-    width: 100%; /* Faz com que os links ocupem toda a largura disponível */
-    max-width: 300px; /* Define um tamanho máximo para evitar que fique muito largo */
-    text-align: left; /* Alinha o texto à esquerda */
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
     border-radius: 8px;
     font-size: 1.5rem;
     font-weight: 600;
-    padding: 10px; /* Aumenta o padding para melhorar a aparência */
+    padding: 10px;
     text-decoration: none;
-    color: #333;
-    box-sizing: border-box; /* Inclui o padding e a borda no cálculo da largura e altura */
-}
-
-#contact a img {
-    width: 24px; /* Ajusta o tamanho dos ícones */
-    height: 24px;
+    color: var(--primary-color);
+    box-sizing: border-box;
 }
 
 #contact a:hover {
     background-color: rgba(133, 128, 128, 0.934);
-}
-
-/* Estilos específicos para dispositivos móveis */
-@media (max-width: 768px) {
-    #contact a {
-        width: 100%; /* Ajusta a largura dos links em dispositivos móveis */
-    }
-}
-
-/* Estilos específicos para dispositivos móveis */
-@media (max-width: 768px) {
-    #contact a {
-        width: 90%; /* Ajusta a largura dos links em dispositivos móveis */
-    }
 }
 
 .overlay {
@@ -198,11 +158,17 @@ section h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: var(--overlay-bg);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    opacity: 0;
+    transition: opacity var(--transition-speed);
+}
+
+.overlay.active {
+    opacity: 1;
 }
 
 .overlay-image {
@@ -210,24 +176,30 @@ section h2 {
     max-height: 90%;
 }
 
-
-@media (max-width: 768px) {
-    .project-card img {
-        max-width: 100%; /* Faz com que a imagem se ajuste ao container em dispositivos menores */
-    }
-}
-
-
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
+    background-color: var(--primary-color);
     color: #fff;
-    position: relative; /* Use fixed ou absolute se necessário */
+    position: relative;
     width: 100%;
     bottom: 0;
 }
 
 a:focus {
-    outline: 2px solid #333; /* Adiciona uma borda ao focar no link */
+    outline: 2px solid var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .certificado {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .certificado {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 }
